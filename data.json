@@ -2,28 +2,28 @@
     "perfil": {
         "nome": "Cesar",
         "idade": "19",
-        "cargo_atual": "Auxiliar Administrativo",
+        "cargo_atual": "Aux Administrativo",
         "anos_experiencia": "1"
     },
     "interesses": {
         "gestao": 3,
-        "marketing": 0,
+        "marketing": 1,
         "financas": 2,
         "tecnologia": 5,
-        "vendas": 3,
+        "vendas": 2,
         "inovacao": 5,
-        "rh": 0,
+        "rh": 2,
         "estrategia": 5,
         "operacoes": 3
     },
     "habilidades": {
-        "lideranca": 5,
-        "negociacao": 5,
-        "analise_dados": 5,
+        "lideranca": 4,
+        "negociacao": 3,
+        "analise_dados": 4,
         "criatividade": 5,
         "organizacao": 3,
-        "atendimento_cliente": 2,
-        "planejamento": 3
+        "atendimento_cliente": 1,
+        "planejamento": 4
     },
     "objetivos": {
         "promocao": true,
