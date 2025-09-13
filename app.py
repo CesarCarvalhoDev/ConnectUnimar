@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+import requests
+from flask import render_template
 import openai
 import os
 from dotenv import load_dotenv
