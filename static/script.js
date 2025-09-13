@@ -1,11 +1,15 @@
 document.getElementById('submitButton').addEventListener('click', () => {
-    // Perfil
-    const nome = document.getElementById('nome').value;
-    const idade = document.getElementById('idade').value;
-    const cargo_atual = document.getElementById('cargo').value;
-    const anos_experiencia = document.getElementById('anos').value;
+    const form = document.getElementById('userForm');
 
-    // Interesses
+    // Pegar perfil dos inputs hidden
+    const perfil = {
+        nome: form.querySelector('input[name="perfil_nome"]').value,
+        idade: parseInt(form.querySelector('input[name="perfil_idade"]').value),
+        cargo_atual: form.querySelector('input[name="perfil_cargo"]').value,
+        anos_experiencia: parseInt(form.querySelector('input[name="perfil_anos"]').value)
+    };
+
+    // Pegar interesses
     const interesses = {
         gestao: parseInt(document.querySelector('input[name="interesses_gestao"]').value) || 0,
         marketing: parseInt(document.querySelector('input[name="interesses_marketing"]').value) || 0,
@@ -18,7 +22,7 @@ document.getElementById('submitButton').addEventListener('click', () => {
         operacoes: parseInt(document.querySelector('input[name="interesses_operacoes"]').value) || 0
     };
 
-    // Habilidades
+    // Pegar habilidades
     const habilidades = {
         lideranca: parseInt(document.querySelector('input[name="habilidades_lideranca"]').value) || 0,
         negociacao: parseInt(document.querySelector('input[name="habilidades_negociacao"]').value) || 0,
@@ -29,19 +33,11 @@ document.getElementById('submitButton').addEventListener('click', () => {
         planejamento: parseInt(document.querySelector('input[name="habilidades_planejamento"]').value) || 0
     };
 
-    // Objetivos
-    const objetivos = {
-        promocao: document.querySelector('input[name="objetivo_promocao"]').checked,
-        melhorar_habilidades: document.querySelector('input[name="objetivo_melhorar_habilidades"]').checked,
-        abrir_negocio: document.querySelector('input[name="objetivo_abrir_negocio"]').checked
-    };
-
-    // Criar objeto JSON completo
+    // Criar objeto completo
     const data = {
-        perfil: { nome, idade, cargo_atual, anos_experiencia },
+        perfil,
         interesses,
-        habilidades,
-        objetivos
+        habilidades
     };
 
     // Enviar JSON para o backend
