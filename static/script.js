@@ -1,14 +1,6 @@
 document.getElementById('submitButton').addEventListener('click', () => {
     const form = document.getElementById('userForm');
 
-    // Pegar perfil dos inputs hidden
-    const perfil = {
-        nome: form.querySelector('input[name="perfil_nome"]').value,
-        idade: parseInt(form.querySelector('input[name="perfil_idade"]').value),
-        cargo_atual: form.querySelector('input[name="perfil_cargo"]').value,
-        anos_experiencia: parseInt(form.querySelector('input[name="perfil_anos"]').value)
-    };
-
     // Pegar interesses
     const interesses = {
         gestao: parseInt(document.querySelector('input[name="interesses_gestao"]').value) || 0,
@@ -49,7 +41,7 @@ document.getElementById('submitButton').addEventListener('click', () => {
     .then(response => response.json())
     .then(result => {
         alert('Dados enviados com sucesso!');
-        console.log(result);
+        window.location.href = '/resultado'; // Redireciona para a página de resultado
     })
     .catch(error => {
         console.error('Erro:', error);
