@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectUnimar - Mapa Comportamental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Mapa comportamental</h1>
+        <form id="userForm">
+            <!-- Perfil -->
+            <h4 class="mt-4">Perfil</h4>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" name="idade" required>
+            </div>
+            <div class="mb-3">
+                <label for="cargo" class="form-label">Cargo Atual</label>
+                <input type="text" class="form-control" id="cargo" name="cargo_atual" required>
+            </div>
+            <div class="mb-3">
+                <label for="anos" class="form-label">Anos de Experiência</label>
+                <input type="number" class="form-control" id="anos" name="anos_experiencia" required>
+            </div>
+
+            <!-- Interesses -->
+            <h4 class="mt-4">Interesses (0 a 5)</h4>
+            <div class="mb-3"><label class="form-label">Gestão</label><input type="number" class="form-control" name="interesses_gestao" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Marketing</label><input type="number" class="form-control" name="interesses_marketing" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Finanças</label><input type="number" class="form-control" name="interesses_financas" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Tecnologia</label><input type="number" class="form-control" name="interesses_tecnologia" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Vendas</label><input type="number" class="form-control" name="interesses_vendas" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Inovação</label><input type="number" class="form-control" name="interesses_inovacao" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">RH</label><input type="number" class="form-control" name="interesses_rh" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Estratégia</label><input type="number" class="form-control" name="interesses_estrategia" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Operações</label><input type="number" class="form-control" name="interesses_operacoes" min="0" max="5"></div>
+
+            <!-- Habilidades -->
+            <h4 class="mt-4">Habilidades (0 a 5)</h4>
+            <div class="mb-3"><label class="form-label">Liderança</label><input type="number" class="form-control" name="habilidades_lideranca" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Negociação</label><input type="number" class="form-control" name="habilidades_negociacao" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Análise de Dados</label><input type="number" class="form-control" name="habilidades_analise_dados" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Criatividade</label><input type="number" class="form-control" name="habilidades_criatividade" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Organização</label><input type="number" class="form-control" name="habilidades_organizacao" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Atendimento ao Cliente</label><input type="number" class="form-control" name="habilidades_atendimento_cliente" min="0" max="5"></div>
+            <div class="mb-3"><label class="form-label">Planejamento</label><input type="number" class="form-control" name="habilidades_planejamento" min="0" max="5"></div>
+
+            <!-- Objetivos -->
+            <h4 class="mt-4">Objetivos</h4>
+            <div class="form-check"><input class="form-check-input" type="checkbox" name="objetivo_promocao"><label class="form-check-label">Promoção</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" name="objetivo_melhorar_habilidades"><label class="form-check-label">Melhorar habilidades</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" name="objetivo_abrir_negocio"><label class="form-check-label">Abrir meu próprio negócio</label></div>
+
+            <button type="button" id="submitButton" class="btn btn-primary mt-4">Enviar</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
